@@ -26,8 +26,8 @@ jobs:
         run: npm install
 
       # Bước 4: Build và Export Next.js project
-      - name: Build and Export project
-        run: npm run build && npm run export
+      - name: Build project
+        run: npm run build
 
       # Bước 5: Deploy lên nhánh gh-pages
       - name: Deploy to gh-pages
