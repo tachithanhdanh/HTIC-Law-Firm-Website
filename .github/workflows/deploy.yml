@@ -21,6 +21,9 @@ jobs:
         with:
           node-version: 20
 
+      - name: Set NODE_ENV
+        run: echo "NODE_ENV=production" >> $GITHUB_ENV
+
       # Bước 3: Cài đặt dependencies
       - name: Install dependencies
         run: npm install
