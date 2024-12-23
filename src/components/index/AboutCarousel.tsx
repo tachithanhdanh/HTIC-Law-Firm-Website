@@ -40,7 +40,7 @@ const AboutCarousel = () => {
     >
       <div className="max-w-7xl mx-auto px-4">
         {/* Wrapper bao quanh cả Left và Right Section */}
-        <div className="bg-white rounded-lg shadow-lg p-8 grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+        <div className="bg-white/70 rounded-lg shadow-lg p-8 grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
           {/* Left Section */}
           <div>
             <h2 className="text-3xl font-bold text-gray-800 mb-4 text-center">
@@ -68,7 +68,7 @@ const AboutCarousel = () => {
 
           {/* Right Section */}
           <div>
-            <h2 className="text-2xl font-bold text-gray-800 mb-4 text-center">
+            <h2 className="text-3xl font-bold text-gray-800 mb-4 text-center">
               Tại Sao Nên Chọn Chúng Tôi
             </h2>
             <div
