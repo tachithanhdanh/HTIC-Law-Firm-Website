@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Image from "next/image";
+import { getStaticImagePath } from "@/utils";
 
 const Carousel = () => {
   const slides = [
@@ -35,7 +37,14 @@ const Carousel = () => {
     >
       {/* Carousel Wrapper */}
       <div className="relative h-[450px] overflow-hidden">
-        <div className="relative h-[450px] overflow-hidden before:absolute before:inset-0 before:bg-[url('/index/slide-background.png')] before:bg-cover" />
+        <div
+          className="relative h-[450px] overflow-hidden before:absolute before:inset-0 before:bg-cover"
+          style={{
+            backgroundImage: `url('${getStaticImagePath(
+              slides[currentIndex].image
+            )}')`,
+          }}
+        />
         {slides.map((slide, index) => (
           <div
             key={index}
@@ -44,10 +53,12 @@ const Carousel = () => {
             }`}
             data-carousel-item
           >
-            <img
-              src={slide.image}
+            <Image
+              src={getStaticImagePath(slide.image)}
               alt={`Slide ${index + 1}`}
-              className="absolute block w-[1000px] h-[360px] object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              width={1000} // Chiều rộng ảnh
+              height={360} // Chiều cao ảnh
+              className="absolute block object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
             />
           </div>
         ))}

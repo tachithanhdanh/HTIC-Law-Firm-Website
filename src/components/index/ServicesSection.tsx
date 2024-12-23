@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getStaticImagePath } from "@/utils";
 
 const ServicesSection = () => {
   const services = [
@@ -43,7 +44,7 @@ const ServicesSection = () => {
             >
               <div className="w-24 h-24 mb-4">
                 <Image
-                  src={service.icon}
+                  src={getStaticImagePath(service.icon)}
                   alt={service.title}
                   width={96}
                   height={96}

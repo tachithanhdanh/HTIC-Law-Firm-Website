@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { getStaticImagePath } from "@/utils";
+import Image from "next/image";
 
 const AboutCarousel = () => {
   const slides = [
@@ -36,7 +38,12 @@ const AboutCarousel = () => {
   return (
     <section
       id="about-us"
-      className="w-full bg-gray-100 py-10 bg-[url('/index/about-us-background.png')] bg-cover bg-center"
+      className="w-full bg-gray-100 py-10 bg-cover bg-center"
+      style={{
+        backgroundImage: `url('${getStaticImagePath(
+          "/index/about-us-background.png"
+        )}')`,
+      }}
     >
       <div className="max-w-7xl mx-auto px-4">
         {/* Wrapper bao quanh cả Left và Right Section */}
@@ -47,9 +54,11 @@ const AboutCarousel = () => {
               Về Chúng Tôi
             </h2>
             <div className="mb-4">
-              <img
-                src="/index/about-us-office.png"
+              <Image
+                src={getStaticImagePath("/index/about-us-office.png")}
                 alt="Văn phòng HTIC"
+                width={500} // Chiều rộng cố định
+                height={200} // Chiều cao cố định
                 className="rounded-lg object-cover w-full h-auto"
               />
             </div>
@@ -86,10 +95,14 @@ const AboutCarousel = () => {
                     } duration-700 ease-in-out`}
                     data-carousel-item
                   >
-                    <img
-                      src={slide.image}
+                    <Image
+                      src={getStaticImagePath(slide.image)}
                       alt={slide.title}
+                      width={570} // Đặt chiều rộng mong muốn
+                      height={370} // Đặt chiều cao mong muốn
                       className="block w-full object-cover"
+                      priority={index === 0} // Ưu tiên tải ảnh đầu tiên
+                      unoptimized // Nếu bạn sử dụng static export
                     />
                     <p className="text-center text-gray-600 mt-2">
                       {slide.description}

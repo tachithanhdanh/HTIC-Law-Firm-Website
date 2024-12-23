@@ -28,8 +28,8 @@ jobs:
       - name: Install TypeScript and ESLint
         run: npm install --save-dev eslint typescript @types/react @types/node
 
-      - name: Set NODE_ENV
-        run: echo "NODE_ENV=production" >> $GITHUB_ENV
+      - name: Set NEXT_PUBLIC_BASE_PATH
+        run: echo "NEXT_PUBLIC_BASE_PATH=/HTIC-Law-Firm-Website" >> $GITHUB_ENV
 
       # Bước 4: Build và Export Next.js project
       - name: Build project

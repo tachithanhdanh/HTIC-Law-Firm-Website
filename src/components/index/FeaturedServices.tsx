@@ -1,35 +1,43 @@
 import Image from "next/image";
+import { getStaticImagePath } from "@/utils";
 
 const FeaturedServices = () => {
   const services = [
     {
-      icon: "/icons/service-1.svg",
+      icon: "/index/doanh-nghiep-va-dau-tu.svg",
       title: "Doanh Nghiệp & Đầu Tư",
     },
     {
-      icon: "/icons/service-2.svg",
+      icon: "/index/phap-ly-bat-dong-san.svg",
       title: "Pháp Lý Bất Động Sản",
     },
     {
-      icon: "/icons/service-3.svg",
+      icon: "/index/thue-bao-hiem.svg",
       title: "Thuế - Bảo Hiểm",
     },
     {
-      icon: "/icons/service-4.svg",
+      icon: "/index/so-huu-tri-tue.svg",
       title: "Sở Hữu Trí Tuệ",
     },
     {
-      icon: "/icons/service-5.svg",
+      icon: "/index/phap-ly-chung-khoan.svg",
       title: "Pháp Lý Chứng Khoán",
     },
     {
-      icon: "/icons/service-6.svg",
+      icon: "/index/tu-van-giay-phep.svg",
       title: "Tư Vấn Giấy Phép",
     },
   ];
 
   return (
-    <section className="bg-gray-900 py-12">
+    <section
+      className="py-12 bg-cover bg-center"
+      style={{
+        backgroundImage: `url('${getStaticImagePath(
+          "/index/featured-services.png"
+        )}')`,
+      }}
+    >
       <div className="max-w-7xl mx-auto px-4">
         {/* Tiêu Đề */}
         <h2 className="text-3xl font-bold text-center text-white mb-8">
@@ -41,30 +49,44 @@ const FeaturedServices = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center transform transition-transform hover:scale-105"
+              className="bg-transparent p-6 flex flex-col items-center text-center"
             >
               {/* Biểu Tượng */}
-              <div className="w-16 h-16 mb-4">
+              <div className="w-[230px] h-[230px] mb-3">
                 <Image
-                  src={service.icon}
+                  src={getStaticImagePath(service.icon)}
                   alt={service.title}
-                  width={64}
-                  height={64}
+                  width={230}
+                  height={230}
                   className="object-contain"
                 />
               </div>
               {/* Tiêu Đề */}
-              <h3 className="text-lg font-semibold text-gray-800">
+              <h3 className="text-xl font-semibold text-white">
                 {service.title}
               </h3>
             </div>
           ))}
         </div>
-
-        {/* Nút "Xem Thêm" */}
-        <div className="text-center mt-8">
-          <button className="px-6 py-2 bg-white text-gray-800 font-medium rounded-full shadow hover:bg-gray-200 transition">
-            Xem Thêm
+        {/* Div Bao Ngoài */}
+        <div className="flex justify-center items-center h-full">
+          {/* Nút "Xem Thêm" */}
+          <button className="w-[348px] px-6 py-2 border border-white font-semibold text-white hover:bg-red-500 hover:text-white transition flex items-center justify-center space-x-2">
+            <span>XEM THÊM</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="2"
+              stroke="currentColor"
+              className="w-5 h-5"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
           </button>
         </div>
       </div>
