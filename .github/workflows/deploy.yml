@@ -21,15 +21,15 @@ jobs:
         with:
           node-version: 20
 
-      - name: Set NODE_ENV
-        run: echo "NODE_ENV=production" >> $GITHUB_ENV
-
       # Bước 3: Cài đặt dependencies
       - name: Install dependencies
         run: npm install
 
       - name: Install TypeScript and ESLint
         run: npm install --save-dev eslint typescript @types/react @types/node
+
+      - name: Set NODE_ENV
+        run: echo "NODE_ENV=production" >> $GITHUB_ENV
 
       # Bước 4: Build và Export Next.js project
       - name: Build project
