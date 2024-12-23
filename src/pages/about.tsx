@@ -5,7 +5,7 @@ const About = () => {
     <div>
       <Navbar />
       <h1>Giới Thiệu</h1>
-      <p>Đây là trang giới thiệu.</p>
+      <p>Đây là trang giới thiệu. Xin chào</p>
     </div>
   );
 };
