@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff; /* Màu nền sáng */
+  --foreground: #171717; /* Màu chữ tối */
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  color: #333; /* Màu chữ tiêu đề */
+}
+
+p {
+  margin: 0 0 10px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  background: #333; /* Màu nền của thanh navbar */
+  padding: 10px;
+}
+
+nav ul li {
+  margin-right: 15px;
+}
+
+nav ul li a {
+  color: white; /* Màu chữ của các link trong navbar */
+  text-decoration: none;
+}
