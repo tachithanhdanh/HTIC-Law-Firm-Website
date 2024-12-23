@@ -3,11 +3,16 @@ const LatestNews = () => {
     <section className="py-12 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
-        <div className="flex justify-between items-center mb-8">
-          <h2 className="text-3xl font-bold text-gray-800">Tin Tức Mới</h2>
+        <div className="flex justify-center items-center mb-8">
+          {/* Title */}
+          <h2 className="text-3xl font-bold text-gray-800 flex-grow text-center">
+            Tin Tức Mới
+          </h2>
+
+          {/* "Xem thêm" Button */}
           <a
             href="#"
-            className="text-blue-500 hover:underline flex items-center"
+            className="text-blue-500 hover:underline flex items-center ml-auto"
           >
             Xem thêm
             <svg
