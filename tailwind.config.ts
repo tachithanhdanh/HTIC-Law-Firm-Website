@@ -13,6 +13,7 @@ export default {
         foreground: "var(--foreground)",
         navbarColor: "#1C76BC",
         sliderButtonColor: "#575757",
+        backgroundTestimonial: "#0F75BC",
       },
       fontFamily: {
         roboto: ["Roboto", "sans-serif"],
