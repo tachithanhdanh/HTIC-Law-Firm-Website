@@ -3,6 +3,7 @@ import AdditionalInformation from "@/components/index/AdditionalInformation";
 import Carousel from "@/components/index/Carousel";
 import FeaturedProjects from "@/components/index/FeaturedProjects";
 import FeaturedServices from "@/components/index/FeaturedServices";
+import LatestNews from "@/components/index/LatestNews";
 import ServicesSection from "@/components/index/ServicesSection";
 
 const Home = () => {
@@ -14,10 +15,7 @@ const Home = () => {
       <FeaturedServices />
       <FeaturedProjects />
       <AdditionalInformation />
-      <div>
-        <h1>Trang Chủ</h1>
-        <p>Chào mừng đến với website của chúng tôi!</p>
-      </div>
+      <LatestNews />
     </>
   );
 };

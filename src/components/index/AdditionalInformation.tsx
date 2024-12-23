@@ -37,7 +37,7 @@ const AdditionalInformation = () => {
             {/* Left Column Content */}
             <div className="md:col-span-2 flex items-center justify-center">
               <Image
-                src={getStaticImagePath("index/tu-van-phap-ly-news.png")}
+                src={getStaticImagePath("/index/tu-van-phap-ly-news.png")}
                 alt="Tư Vấn Pháp Lý"
                 width={225}
                 height={160}
@@ -94,7 +94,7 @@ const AdditionalInformation = () => {
             <div className="md:col-span-2 flex items-center justify-center">
               <Image
                 src={getStaticImagePath(
-                  "index/tu-van-doanh-nghiep-nhat-ban.png"
+                  "/index/tu-van-doanh-nghiep-nhat-ban.png"
                 )}
                 alt="Góc Doanh Nghiệp Nhật Bản"
                 width={225}
