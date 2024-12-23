@@ -28,6 +28,9 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Install TypeScript and ESLint
+        run: npm install --save-dev eslint typescript @types/react @types/node
+
       # Bước 4: Build và Export Next.js project
       - name: Build project
         run: npm run build
