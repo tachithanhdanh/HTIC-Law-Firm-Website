@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { getStaticImagePath } from "@/utils";
 
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -15,7 +16,7 @@ const Navbar = () => {
         {/* Logo */}
         <div className="flex items-center">
           <Image
-            src="/htic-law-logo.svg" // Path relative to the public folder
+            src={getStaticImagePath("/htic-law-logo.svg")} // Path relative to the public folder
             alt="HTIC Law Firm Logo"
             width={180}
             height={60}
@@ -28,7 +29,7 @@ const Navbar = () => {
         <div className="hidden md:flex items-center space-x-6 text-sm">
           <div className="flex items-center justify-center">
             <Image
-              src="/ic-phone.svg"
+              src={getStaticImagePath("/ic-phone.svg")}
               alt="Phone Icon"
               width={20}
               height={20}
@@ -40,7 +41,7 @@ const Navbar = () => {
           <div className="h-6 border-l border-gray-500"></div>
           <div className="flex items-center">
             <Image
-              src="/ic-mail.svg"
+              src={getStaticImagePath("/ic-mail.svg")}
               alt="Email Icon"
               width={20}
               height={20}
@@ -54,7 +55,7 @@ const Navbar = () => {
         <div className="flex items-center space-x-4">
           <button className="text-base font-semibold flex items-center">
             <Image
-              src="/vietnam-flag.svg"
+              src={getStaticImagePath("/vietnam-flag.svg")}
               alt="Vietnamese Flag"
               width={20}
               height={13}
@@ -66,7 +67,7 @@ const Navbar = () => {
           <div className="h-6 border-l border-gray-500"></div>
           <button className="text-base font-semibold flex items-center">
             <Image
-              src="/japan-flag.svg"
+              src={getStaticImagePath("/japan-flag.svg")}
               alt="Japanese Flag"
               width={20}
               height={13}

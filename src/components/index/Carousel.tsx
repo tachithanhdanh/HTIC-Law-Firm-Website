@@ -41,7 +41,7 @@ const Carousel = () => {
           className="relative h-[450px] overflow-hidden before:absolute before:inset-0 before:bg-cover"
           style={{
             backgroundImage: `url('${getStaticImagePath(
-              slides[currentIndex].image
+              "/index/slide-background.png"
             )}')`,
           }}
         />
