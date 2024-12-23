@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main # Chỉ chạy khi có thay đổi trên branch main
+  workflow_dispatch: # Cho phép chạy thủ công
 
 jobs:
   build-and-deploy:
@@ -24,13 +25,14 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # Bước 4: Build dự án
-      - name: Build project
-        run: npm run build
+      # Bước 4: Build và Export Next.js project
+      - name: Build and Export project
+        run: npm run build && npm run export
 
-      # Bước 5: Deploy lên GitHub Pages
-      - name: Deploy to GitHub Pages
+      # Bước 5: Deploy lên nhánh gh-pages
+      - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./out # Thư mục chứa file tĩnh
+          publish_dir: ./out # Thư mục chứa các file tĩnh
+          publish_branch: gh-pages # Nhánh mà bạn muốn deploy
