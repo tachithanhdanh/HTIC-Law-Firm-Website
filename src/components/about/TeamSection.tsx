@@ -46,7 +46,7 @@ const lawyers = [
 
 const TeamSection = () => {
   return (
-    <section className="py-12 bg-gray-100">
+    <section className="py-12 bg-gray-100 px-16 lg:px-24">
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Title */}
         <h2 className="text-center text-3xl font-roboto font-bold text-gray-800 mb-8">

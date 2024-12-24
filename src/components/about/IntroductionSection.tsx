@@ -3,7 +3,7 @@ import { getStaticImagePath } from "@/utils";
 
 const IntroductionSection = () => {
   return (
-    <section className="bg-gray-100 py-12 px-4">
+    <section className="bg-gray-100 py-12 px-16 lg:px-24">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-6 bg-white rounded-lg shadow-md">
         {/* Left Profile Section */}
         <div className="md:col-span-3 p-6 flex flex-col items-center text-center">

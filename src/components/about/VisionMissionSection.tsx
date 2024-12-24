@@ -68,7 +68,7 @@ const VisionMissionSection = () => {
   ];
 
   return (
-    <section className="bg-gray-100 py-12">
+    <section className="bg-gray-100 py-12 px-16 lg:px-24">
       <div className="max-w-7xl mx-auto bg-white rounded-lg shadow-md px-9 pb-16 pt-11">
         {/* Section Title */}
         <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">
