@@ -88,7 +88,7 @@ const Navbar = () => {
             Giới Thiệu
           </Link>
           {/* Dropdown Section for Dịch Vụ */}
-          <div className="relative">
+          <div className="relative z-50">
             <button
               onClick={toggleDropdown}
               className="hover:underline flex items-center space-x-1"
@@ -117,7 +117,7 @@ const Navbar = () => {
                   href="/services/business-investment"
                   className="block px-4 py-2 hover:bg-blue-100"
                 >
-                  Doanh nghiệp – Đầu tư
+                  Doanh nghiệp - Đầu tư
                 </Link>
                 <Link
                   href="/services/real-estate"
@@ -129,7 +129,7 @@ const Navbar = () => {
                   href="/services/tax-insurance"
                   className="block px-4 py-2 hover:bg-blue-100"
                 >
-                  Thuế – Bảo hiểm
+                  Thuế - Bảo hiểm
                 </Link>
                 <Link
                   href="/services/intellectual-property"
