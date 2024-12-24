@@ -15,6 +15,10 @@ export default {
         sliderButtonColor: "#575757",
         backgroundTestimonial: "#0F75BC",
         backgroundFooterColor: "#232628",
+        aboutUsTextColor: "#006BB5",
+        aboutUsIntrodctionBackgroundColor: "#F6FBFF",
+        aboutUsIntrodctionBorderColor: "#D8EEFF",
+        aboutUsBackgroundColor: "#F6F8F9",
       },
       fontFamily: {
         roboto: ["Roboto", "sans-serif"],
