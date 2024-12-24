@@ -14,6 +14,7 @@ export default {
         navbarColor: "#1C76BC",
         sliderButtonColor: "#575757",
         backgroundTestimonial: "#0F75BC",
+        backgroundFooterColor: "#232628",
       },
       fontFamily: {
         roboto: ["Roboto", "sans-serif"],

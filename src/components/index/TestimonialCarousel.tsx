@@ -41,6 +41,7 @@ const TestimonialCarousel = () => {
 
   return (
     <section
+      id="testimonial-carousel"
       className="py-12 bg-backgroundTestimonial"
       style={{
         backgroundImage: `url('${getStaticImagePath(
@@ -49,38 +50,12 @@ const TestimonialCarousel = () => {
       }}
     >
       <div className="max-w-5xl mx-auto px-4">
-        <div className="relative bg-white p-8 rounded-lg shadow-lg grid grid-cols-12 items-center gap-6">
-          {/* Profile Image */}
-          <div className="col-span-3 flex justify-center w-[192px] h-[192px]">
-            <Image
-              src={getStaticImagePath(testimonials[currentIndex].image)}
-              alt={testimonials[currentIndex].name}
-              width={192}
-              height={192}
-              className="rounded-full object-cover"
-            />
-          </div>
-
-          {/* Testimonial Text */}
-          <div className="col-span-9">
-            <p className="text-gray-700 italic mb-4 text-lg">
-              {testimonials[currentIndex].text}
-            </p>
-            <p className="text-gray-800 font-semibold text-lg uppercase">
-              {testimonials[currentIndex].name}
-            </p>
-            <p className="text-gray-500 text-lg uppercase">
-              {testimonials[currentIndex].position}
-            </p>
-          </div>
-        </div>
-
-        {/* Navigation */}
-        <div className="flex justify-between items-center mt-6">
+        <div className="relative bg-white p-8 rounded-lg shadow-lg flex items-center gap-6">
+          {/* Previous Button */}
           <button
             title="Previous Testimonial"
             onClick={handlePrev}
-            className="p-2 bg-white rounded-full shadow-md hover:bg-gray-200"
+            className="p-2 bg-white rounded-full shadow-md hover:bg-gray-200 flex-shrink-0"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -97,21 +72,39 @@ const TestimonialCarousel = () => {
               />
             </svg>
           </button>
-          {/* Dots for indicators */}
-          <div className="flex space-x-2">
-            {testimonials.map((_, index) => (
-              <span
-                key={index}
-                className={`w-3 h-3 rounded-full ${
-                  index === currentIndex ? "bg-gray-800" : "bg-gray-300"
-                }`}
-              ></span>
-            ))}
+
+          {/* Testimonial Card */}
+          <div className="flex-1 grid grid-cols-12 items-center gap-6 h-[250px]">
+            {/* Profile Image */}
+            <div className="col-span-3 flex justify-center w-[192px] h-[192px]">
+              <Image
+                src={getStaticImagePath(testimonials[currentIndex].image)}
+                alt={testimonials[currentIndex].name}
+                width={192}
+                height={192}
+                className="rounded-full object-cover"
+              />
+            </div>
+
+            {/* Testimonial Text */}
+            <div className="col-span-9">
+              <p className="text-gray-700 italic mb-4 text-lg">
+                {testimonials[currentIndex].text}
+              </p>
+              <p className="text-gray-800 font-semibold text-lg uppercase">
+                {testimonials[currentIndex].name}
+              </p>
+              <p className="text-gray-500 text-lg uppercase">
+                {testimonials[currentIndex].position}
+              </p>
+            </div>
           </div>
+
+          {/* Next Button */}
           <button
-            title="Navigate to next testimonial"
+            title="Next Testimonial"
             onClick={handleNext}
-            className="p-2 bg-white rounded-full shadow-md hover:bg-gray-200"
+            className="p-2 bg-white rounded-full shadow-md hover:bg-gray-200 flex-shrink-0"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -128,6 +121,18 @@ const TestimonialCarousel = () => {
               />
             </svg>
           </button>
+        </div>
+
+        {/* Indicators */}
+        <div className="flex justify-center space-x-2 mt-4">
+          {testimonials.map((_, index) => (
+            <span
+              key={index}
+              className={`w-3 h-3 rounded-full ${
+                index === currentIndex ? "bg-gray-800" : "bg-gray-300"
+              }`}
+            ></span>
+          ))}
         </div>
       </div>
     </section>
