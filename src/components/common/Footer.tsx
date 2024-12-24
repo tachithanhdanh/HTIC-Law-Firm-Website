@@ -16,7 +16,7 @@ const Footer = () => {
         {/* Logo and Contact Info */}
         <div>
           <Image
-            src="/htic-law-transparent-logo.svg"
+            src={getStaticImagePath("/htic-law-transparent-logo.svg")}
             alt="HTIC Law Firm Logo"
             width={250}
             height={70}
