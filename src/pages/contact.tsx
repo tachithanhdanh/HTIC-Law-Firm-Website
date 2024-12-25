@@ -1,9 +1,13 @@
+import ContactBody from "@/components/contact/ContactBody";
+import ContactHeader from "@/components/contact/ContactHeader";
+
 const Contact = () => {
   return (
-    <div>
-      <h1>Liên Hệ</h1>
-      <p>Hãy liên hệ với chúng tôi qua email hoặc số điện thoại.</p>
-    </div>
+    <>
+      <ContactHeader />
+      <ContactBody />
+      <div>Hello</div>
+    </>
   );
 };
 
