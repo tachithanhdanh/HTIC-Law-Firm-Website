@@ -26,97 +26,108 @@ const FeaturedProjects = () => {
   );
 
   return (
-    <section className="py-12 bg-gray-50 px-16 lg:px-24">
-      <div className="bg-white rounded-lg shadow-lg pt-8 pb-10">
-        <div className="max-w-7xl mx-auto px-4">
-          {/* Section Header */}
-          <div className="flex justify-between items-center mb-8">
-            <h2 className="text-2xl font-bold text-gray-800">
-              Dự Án Tiêu Biểu
-            </h2>
-            <div className="relative w-1/3">
-              <input
-                type="text"
-                placeholder="Tìm Kiếm"
-                value={search}
-                onChange={(e) => setSearch(e.target.value)}
-                className="w-full py-2 px-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+    // <section className="py-12 bg-gray-50 px-16 lg:px-24">
+    // <div className="bg-white rounded-lg shadow-lg pt-8 pb-10">
+    <div className="max-w-7xl mx-auto px-4">
+      {/* Section Header */}
+      <div className="flex justify-between items-center mb-8">
+        <h2 className="text-2xl font-bold text-gray-800">Dự Án Tiêu Biểu</h2>
+        <div className="relative w-1/3">
+          <input
+            type="text"
+            placeholder="Tìm Kiếm"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            className="w-full py-2 px-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <button
+            title="Search"
+            type="submit"
+            className="absolute top-2 right-4 text-gray-500 hover:text-blue-500"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+              stroke="currentColor"
+              className="w-5 h-5"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
               />
-              <button
-                title="Search"
-                type="submit"
-                className="absolute top-2 right-4 text-gray-500 hover:text-blue-500"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={2}
-                  stroke="currentColor"
-                  className="w-5 h-5"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
-
-          {/* Project List */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {filteredProjects.map((project, index) => (
-              <div
-                key={index}
-                className={`md:col-span-2 col-span-1 flex flex-col md:flex-row items-start  overflow-hidden`}
-              >
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  width={500}
-                  height={200}
-                  className="object-cover w-full md:w-1/3"
-                />
-                <div className="p-6">
-                  <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                    {project.title}
-                  </h3>
-                  <p className="text-sm text-gray-500">{project.date}</p>
-                  <p className="text-sm text-gray-600 mb-4">
-                    {project.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* View More Button */}
-          {/* Div Bao Ngoài */}
-          <div className="flex justify-center items-center h-full">
-            {/* Nút "Xem Thêm" */}
-            <button className="w-[348px] px-6 py-2 border border-black font-semibold text-black hover:bg-red-500 hover:text-white transition flex items-center justify-center space-x-2">
-              <span>XEM THÊM</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="2"
-                stroke="currentColor"
-                className="w-5 h-5"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </button>
-          </div>
+            </svg>
+          </button>
         </div>
       </div>
-    </section>
+
+      {/* Project List */}
+      <div className="grid grid-cols-1 gap-8">
+        {filteredProjects.map((project, index) => (
+          <div
+            key={index}
+            className="grid grid-cols-1 md:grid-cols-12 gap-4 items-center"
+          >
+            {/* Image */}
+            <div
+              className={`col-span-12 md:col-span-6 ${
+                index % 2 !== 0 ? "md:order-2" : ""
+              }`}
+            >
+              <Image
+                src={project.image}
+                alt={project.title}
+                width={500}
+                height={300}
+                className="object-cover w-full rounded-lg"
+              />
+            </div>
+
+            {/* Text */}
+            <div
+              className={`col-span-12 md:col-span-6 ${
+                index % 2 !== 0 ? "md:order-1" : ""
+              } p-6`}
+            >
+              <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                {project.title}
+              </h3>
+              <p className="text-sm text-gray-500">{project.date}</p>
+              <p className="text-sm text-gray-600 mb-4">
+                {project.description}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* View More Button */}
+      {/* Div Bao Ngoài */}
+      <div className="flex justify-center items-center h-full mt-12">
+        {/* Nút "Xem Thêm" */}
+        <button className="w-[348px] px-6 py-2 border border-black font-semibold text-black hover:bg-red-500 hover:text-white transition flex items-center justify-center space-x-2">
+          <span>XEM THÊM</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth="2"
+            stroke="currentColor"
+            className="w-5 h-5"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    // </div>
+    // </section>
   );
 };
 

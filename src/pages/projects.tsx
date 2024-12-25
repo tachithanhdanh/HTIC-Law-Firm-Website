@@ -1,11 +1,11 @@
-import FeaturedProjects from "@/components/projects/FeaturedProjects";
 import ProjectHeader from "@/components/projects/ProjectHeader";
+import ProjectPageBody from "@/components/projects/ProjectPageBody";
 
 const Projects = () => {
   return (
     <>
       <ProjectHeader />
-      <FeaturedProjects />
+      <ProjectPageBody />
     </>
   );
 };
