@@ -1,11 +1,11 @@
 import ProjectHeader from "@/components/projects/ProjectHeader";
-import ProjectPageBody from "@/components/projects/ProjectPageBody";
+import ProjectBody from "@/components/projects/ProjectBody";
 
 const Projects = () => {
   return (
     <>
       <ProjectHeader />
-      <ProjectPageBody />
+      <ProjectBody />
     </>
   );
 };

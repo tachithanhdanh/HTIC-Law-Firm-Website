@@ -2,7 +2,7 @@ import PaginatedArticleList from "../common/PaginatedArticleList";
 import FeaturedProjects from "./FeaturedProjects";
 import { projects } from "@/data/projects";
 
-const ProjectPageBody = () => {
+const ProjectBody = () => {
   const itemsPerPage = 2;
 
   return (
@@ -20,4 +20,4 @@ const ProjectPageBody = () => {
   );
 };
 
-export default ProjectPageBody;
+export default ProjectBody;
