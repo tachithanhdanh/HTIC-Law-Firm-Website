@@ -28,11 +28,16 @@ const FeaturedProjects = () => {
   return (
     // <section className="py-12 bg-gray-50 px-16 lg:px-24">
     // <div className="bg-white rounded-lg shadow-lg pt-8 pb-10">
-    <div className="max-w-7xl mx-auto px-4">
-      {/* Section Header */}
+    <section className="max-w-7xl mx-auto px-4">
       <div className="flex justify-between items-center mb-8">
-        <h2 className="text-2xl font-bold text-gray-800">Dự Án Tiêu Biểu</h2>
-        <div className="relative w-1/3">
+        {/* Section Header */}
+        <div className="flex items-center space-x-2">
+          <span className="h-8 w-1 bg-blue-500"></span>
+          <h2 className="text-2xl font-semibold text-gray-800 font-roboto">
+            Dự Án Tiêu Biểu
+          </h2>
+        </div>
+        <div className="relative w-5/12">
           <input
             type="text"
             placeholder="Tìm Kiếm"
@@ -91,11 +96,13 @@ const FeaturedProjects = () => {
                 index % 2 !== 0 ? "md:order-1" : ""
               } p-6`}
             >
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">
+              <h3 className="text-lg font-semibold text-gray-800">
                 {project.title}
               </h3>
-              <p className="text-sm text-gray-500">{project.date}</p>
-              <p className="text-sm text-gray-600 mb-4">
+              <p className="text-sm text-gray-500 font-roboto">
+                {project.date}
+              </p>
+              <p className="text-sm text-gray-600 mb-4 font-roboto">
                 {project.description}
               </p>
             </div>
@@ -125,7 +132,7 @@ const FeaturedProjects = () => {
           </svg>
         </button>
       </div>
-    </div>
+    </section>
     // </div>
     // </section>
   );
