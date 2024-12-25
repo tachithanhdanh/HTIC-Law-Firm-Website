@@ -2,7 +2,6 @@ import Image from "next/image";
 import { useState } from "react";
 import ViewMoreButton from "../common/ViewMoreButton";
 import { getStaticImagePath } from "@/utils";
-import { get } from "https";
 
 const projects = [
   {
