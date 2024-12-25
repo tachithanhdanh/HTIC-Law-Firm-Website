@@ -1,3 +1,4 @@
+import { NewsItem } from "@/components/common/NewsGrid";
 import { Article } from "@/components/common/PaginatedArticleList";
 import { getStaticImagePath } from "@/utils";
 
@@ -126,4 +127,27 @@ export const legalConsultNews: Article[] = [
       ],
     ],
   },
+];
+
+export const latestNewsData: NewsItem[] = [
+  {
+    date: "18/05/2022",
+    title: "Những quy định về cá nhân đầu tư ra nước ngoài",
+  },
+  {
+    date: "18/05/2022",
+    title: "Hồ sơ thay đổi một số vấn đề của doanh nghiệp",
+  },
+  { date: "18/05/2022", title: "Thủ tục bảo hộ nhãn hiệu" },
+  {
+    date: "18/05/2022",
+    title: "Thay đổi thông tin cổ đông sáng lập công ty cổ phần",
+  },
+  { date: "18/05/2022", title: "Thủ tục giải thể doanh nghiệp" },
+  {
+    date: "18/05/2022",
+    title: "Thành lập công ty có vốn đầu tư nước ngoài tại Việt Nam",
+  },
+  { date: "18/05/2022", title: "Thủ tục xin cấp giấy phép du học" },
+  { date: "18/05/2022", title: "Thủ tục sang tên sổ đỏ" },
 ];

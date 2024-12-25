@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { getStaticImagePath } from "@/utils";
+import ViewMoreButton from "../common/ViewMoreButton";
 
 const FeaturedServices = () => {
   const services = [
@@ -68,27 +69,7 @@ const FeaturedServices = () => {
             </div>
           ))}
         </div>
-        {/* Div Bao Ngoài */}
-        <div className="flex justify-center items-center h-full">
-          {/* Nút "Xem Thêm" */}
-          <button className="w-[348px] px-6 py-2 border border-white font-semibold text-white hover:bg-red-500 hover:text-white transition flex items-center justify-center space-x-2">
-            <span>XEM THÊM</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="2"
-              stroke="currentColor"
-              className="w-5 h-5"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </button>
-        </div>
+        <ViewMoreButton isWhite={true} />
       </div>
     </section>
   );
