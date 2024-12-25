@@ -120,7 +120,7 @@ const ContactBody = () => {
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.710247774776!2d106.700423815348!3d10.762622492324417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDQ1JzQ1LjQiTiAxMDbCsDQyJzAzLjAiRQ!5e0!3m2!1sen!2s!4v1618354838493!5m2!1sen!2s"
                     width="100%"
                     height="100%"
-                    allowFullScreen=""
+                    allowFullScreen={true}
                     loading="lazy"
                     className="rounded-lg border border-gray-300"
                   ></iframe>
