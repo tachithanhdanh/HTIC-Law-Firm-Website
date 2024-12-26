@@ -6,7 +6,6 @@ const Contact = () => {
     <>
       <ContactHeader />
       <ContactBody />
-      <div>Hello</div>
     </>
   );
 };

@@ -1,0 +1,83 @@
+Folder PATH listing for volume DATA
+Volume serial number is E88B-70BA
+D:\GITHUB\TACHITHANHDANH\HCMUS\HTIC-LAW-FIRM-WEBSITE\SRC
+|   create_files.cmd
+|   utils.ts
+|   
++---components
+|   +---about
+|   |       AboutHeader.tsx
+|   |       IntegrityCard.tsx
+|   |       IntroductionSection.tsx
+|   |       TeamSection.tsx
+|   |       VisionMissionSection.tsx
+|   |       
+|   +---common
+|   |       Accordion.tsx
+|   |       Footer.tsx
+|   |       Navbar.tsx
+|   |       NewsGrid.tsx
+|   |       PaginatedArticleList.tsx
+|   |       ViewMoreButton.tsx
+|   |       
+|   +---consult
+|   |       ConsultBody.tsx
+|   |       ConsultHeader.tsx
+|   |       ConsultLatestNews.tsx
+|   |       
+|   +---contact
+|   |       ContactBody.tsx
+|   |       ContactHeader.tsx
+|   |       
+|   +---index
+|   |       AboutCarousel.tsx
+|   |       AdditionalInformation.tsx
+|   |       Carousel.tsx
+|   |       FeaturedProjects.tsx
+|   |       FeaturedServices.tsx
+|   |       LatestNews.tsx
+|   |       LogoCarousel.tsx
+|   |       ServicesSection.tsx
+|   |       TestimonialCarousel.tsx
+|   |       
+|   +---japanese
+|   |       FAQComponent.tsx
+|   |       JapaneseBody.tsx
+|   |       JapaneseHeader.tsx
+|   |       
+|   +---projects
+|   |       FeaturedProjects.tsx
+|   |       ProjectBody.tsx
+|   |       ProjectHeader.tsx
+|   |       
+|   \---services
+|           FeaturedServices.tsx
+|           OtherServiceCard.tsx
+|           OtherServices.tsx
+|           ServicesHeader.tsx
+|           ServicesSection.tsx
+|           
++---data
+|       consult.tsx
+|       index.tsx
+|       japanese.tsx
+|       projects.tsx
+|       
++---pages
+|   |   about.tsx
+|   |   consult.tsx
+|   |   contact.tsx
+|   |   index.tsx
+|   |   japanese.tsx
+|   |   news.tsx
+|   |   projects.tsx
+|   |   _app.tsx
+|   |   _document.tsx
+|   |   
+|   \---services
+|           index.tsx
+|           news.tsx
+|           
+\---styles
+        globals.css
+        
