@@ -10,10 +10,13 @@
     "export": "next build && next export"
   },
   "dependencies": {
+    "axios": "^1.7.9",
     "htic-law-firm-website": "file:",
     "next": "15.1.2",
+    "quill-image-resize-module": "^3.0.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-quill-new": "^3.3.3"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
