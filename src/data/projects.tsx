@@ -5,6 +5,7 @@ type Project = Article;
 
 export const featuredProjects: Project[] = [
   {
+    id: "1",
     image: "/projects/hoat-dong-tu-van-dau-tu.png",
     title: "Hoạt Động Tư Vấn Đầu Tư",
     date: "18/05/2022",
@@ -24,6 +25,7 @@ export const featuredProjects: Project[] = [
     ],
   },
   {
+    id: "2",
     image: "/projects/xin-giay-xac-nhan-attp.png",
     title: "Xin Giấy Xác Nhận ATTP Đối Với Thực Phẩm Chức Năng",
     date: "18/05/2022",
@@ -46,6 +48,7 @@ export const featuredProjects: Project[] = [
 
 export const projects: Project[] = [
   {
+    id: "3",
     image: getStaticImagePath("/projects/hoat-dong-giai-quyet.png"),
     title: "Hoạt Động Giải Quyết Tranh Chấp Tố Tụng",
     date: "18/05/2022",
@@ -78,6 +81,7 @@ export const projects: Project[] = [
     ],
   },
   {
+    id: "4",
     image: getStaticImagePath("/projects/diem-moi-du-thao.png"),
     title: "Điểm Mới Dự Thảo Luật Thuế Thu Nhập Doanh Nghiệp",
     date: "18/05/2022",
@@ -103,6 +107,7 @@ export const projects: Project[] = [
     ],
   },
   {
+    id: "5",
     image: getStaticImagePath("/projects/du-an-tu-van-doanh-nghiep.png"),
     title: "Dự Án Tư Vấn Doanh Nghiệp Tiêu Biểu",
     date: "18/05/2022",
@@ -156,6 +161,7 @@ export const projects: Project[] = [
     ],
   },
   {
+    id: "6",
     image: getStaticImagePath("/projects/dang-ky-ma-so-thue.png"),
     title: "Đăng Ký Mã Số Thuế Cá Nhân: Hồ Sơ & Thủ Tục Cần Biết",
     date: "18/05/2022",
@@ -187,6 +193,7 @@ export const projects: Project[] = [
     ],
   },
   {
+    id: "7",
     image: getStaticImagePath("/projects/thue-toi-thieu-toan-cau.png"),
     title:
       "Thuế Tối Thiểu Toàn Cầu Và Những Vấn Đề Doanh Nghiệp Việt Nam Cần Biết",

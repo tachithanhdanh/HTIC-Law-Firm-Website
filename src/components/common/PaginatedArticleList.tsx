@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
+import { getStaticImagePath } from "@/utils";
 
 export type DescriptionPart = {
   text: string;
@@ -7,6 +8,7 @@ export type DescriptionPart = {
 };
 
 export type Article = {
+  id: string;
   image: string;
   title: string;
   date: string;
@@ -109,7 +111,7 @@ const PaginatedArticleList: React.FC<PaginatedArticleListProps> = ({
               }`}
             >
               <Image
-                src={project.image}
+                src={getStaticImagePath(project.image)}
                 alt={project.title}
                 width={columns === 1 ? 180 : 115}
                 height={columns === 1 ? 180 : 115}

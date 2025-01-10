@@ -57,7 +57,7 @@ const NewsBody = () => {
         <PaginatedArticleList
           projects={articles}
           itemsPerPage={8}
-          headerTitle="Các Dự Án Khác"
+          headerTitle="Các Tin Tức Khác"
           columns={2}
           hideHeader={true}
         />

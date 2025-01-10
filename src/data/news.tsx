@@ -1,7 +1,165 @@
 import { Article } from "@/components/common/PaginatedArticleList";
 
+export const relatedNews = [
+  {
+    id: "1",
+    title: "7 Trường hợp không được cấp sổ đỏ năm 2024",
+    image: "/images/news1.jpg",
+  },
+  {
+    id: "2",
+    title: "Điểm mới dự thảo luật thuế thu nhập doanh nghiệp",
+    image: "/images/news2.jpg",
+  },
+  {
+    id: "3",
+    title: "Đăng ký mã số thuế cá nhân: hồ sơ cần biết",
+    image: "/images/news3.jpg",
+  },
+  // Thêm các tin khác...
+];
+
+export const featuredServices = [
+  {
+    id: "1",
+    icon: "/icons/service1.png",
+    name: "Doanh Nghiệp Và Đầu Tư",
+  },
+  {
+    id: "2",
+    icon: "/icons/service2.png",
+    name: "Pháp Lý Bất Động Sản",
+  },
+  {
+    id: "3",
+    icon: "/icons/service3.png",
+    name: "Thuế - Bảo Hiểm",
+  },
+  // Thêm các dịch vụ khác...
+];
+
+export const exampleArticle: Article = {
+  id: "1",
+  image: "/news/legal_reform.png",
+  title:
+    "Cải Cách Luật Pháp Tại Việt Nam: Thúc Đẩy Phát Triển Kinh Tế - Xã Hội",
+  date: "10/01/2023",
+  description: [
+    // Mở đầu
+    [
+      {
+        text: "Trong bối cảnh toàn cầu hóa ngày càng sâu rộng, cải cách luật pháp đóng vai trò quan trọng trong việc định hướng phát triển kinh tế - xã hội tại Việt Nam.",
+        isBold: false,
+      },
+      {
+        text: " Đặc biệt, những thay đổi trong lĩnh vực pháp lý đã góp phần tạo môi trường thuận lợi hơn cho các nhà đầu tư và bảo vệ quyền lợi của người dân.",
+        isBold: false,
+      },
+    ],
+
+    // 1. Cải Cách Về Luật Đầu Tư
+    [{ text: "1. Cải Cách Về Luật Đầu Tư", isBold: true }],
+    [
+      {
+        text: "Luật Đầu tư 2020 và các nghị định liên quan đã tạo điều kiện thuận lợi hơn cho các doanh nghiệp trong và ngoài nước.",
+        isBold: false,
+      },
+      {
+        text: " Cụ thể, các thủ tục hành chính đã được đơn giản hóa, giảm bớt thời gian xử lý hồ sơ và nâng cao tính minh bạch của các quy trình cấp phép.",
+        isBold: false,
+      },
+    ],
+    [
+      {
+        text: "Ngoài ra, việc mở rộng danh mục các lĩnh vực được ưu đãi đầu tư đã khuyến khích các doanh nghiệp đẩy mạnh hoạt động tại Việt Nam, đặc biệt trong các ngành công nghệ cao và năng lượng tái tạo.",
+        isBold: false,
+      },
+    ],
+
+    // 2. Tăng Cường Pháp Lý Về Quyền Sở Hữu Đất Đai
+    [{ text: "2. Tăng Cường Pháp Lý Về Quyền Sở Hữu Đất Đai", isBold: true }],
+    [
+      {
+        text: "Trong thời gian gần đây, Việt Nam đã tăng cường khung pháp lý liên quan đến quyền sử dụng đất, đảm bảo quyền lợi cho người dân và nhà đầu tư.",
+        isBold: false,
+      },
+      {
+        text: " Luật Đất đai sửa đổi hiện đang được thảo luận nhằm giải quyết các vấn đề như tranh chấp đất đai, quyền sở hữu của người nước ngoài, và quản lý tài nguyên đất hiệu quả hơn.",
+        isBold: false,
+      },
+    ],
+
+    // 3. Phòng Chống Tham Nhũng
+    [{ text: "3. Phòng Chống Tham Nhũng", isBold: true }],
+    [
+      {
+        text: "Chống tham nhũng là một trong những ưu tiên hàng đầu trong chiến lược cải cách luật pháp tại Việt Nam. Luật Phòng, chống tham nhũng sửa đổi đã tăng cường các biện pháp giám sát, minh bạch tài sản, và xử lý nghiêm các hành vi sai phạm.",
+        isBold: false,
+      },
+    ],
+    [
+      {
+        text: "Ngoài ra, việc ứng dụng công nghệ trong quản lý nhà nước cũng giúp nâng cao hiệu quả và hạn chế tình trạng lạm dụng quyền lực.",
+        isBold: false,
+      },
+    ],
+
+    // 4. Tăng Cường Quyền Con Người
+    [{ text: "4. Tăng Cường Quyền Con Người", isBold: true }],
+    [
+      {
+        text: "Việt Nam đang không ngừng hoàn thiện hệ thống luật pháp nhằm bảo vệ quyền con người và quyền công dân.",
+        isBold: false,
+      },
+      {
+        text: " Các luật như Luật Hôn nhân và Gia đình, Luật Trẻ em đã được điều chỉnh để phù hợp với các tiêu chuẩn quốc tế.",
+        isBold: false,
+      },
+    ],
+    [
+      {
+        text: "Bên cạnh đó, luật pháp cũng chú trọng đến quyền lợi của các nhóm yếu thế trong xã hội như phụ nữ, trẻ em và người khuyết tật.",
+        isBold: false,
+      },
+    ],
+
+    // 5. Đẩy Mạnh Hội Nhập Quốc Tế
+    [{ text: "5. Đẩy Mạnh Hội Nhập Quốc Tế", isBold: true }],
+    [
+      {
+        text: "Việt Nam đã ký kết nhiều hiệp định thương mại tự do (FTA) thế hệ mới, đòi hỏi luật pháp nội địa phải tương thích với các quy định quốc tế.",
+        isBold: false,
+      },
+      {
+        text: " Điều này không chỉ thúc đẩy xuất khẩu mà còn bảo vệ quyền lợi của doanh nghiệp và người lao động trong các tranh chấp thương mại quốc tế.",
+        isBold: false,
+      },
+    ],
+    [
+      {
+        text: "Các điều chỉnh luật pháp trong lĩnh vực thương mại, sở hữu trí tuệ và cạnh tranh đã tạo nền tảng vững chắc cho Việt Nam hội nhập sâu rộng hơn vào nền kinh tế toàn cầu.",
+        isBold: false,
+      },
+    ],
+
+    // 6. Hướng Tới Tương Lai
+    [{ text: "6. Hướng Tới Tương Lai", isBold: true }],
+    [
+      {
+        text: "Việc cải cách luật pháp là một quá trình liên tục và đòi hỏi sự phối hợp chặt chẽ giữa các cơ quan lập pháp, hành pháp và tư pháp.",
+        isBold: false,
+      },
+      {
+        text: " Với tầm nhìn chiến lược, Việt Nam đang từng bước xây dựng một hệ thống pháp luật hiện đại, minh bạch, và công bằng, đáp ứng nhu cầu phát triển trong thời đại mới.",
+        isBold: false,
+      },
+    ],
+  ],
+};
+
 export const featuredNews: Article[] = [
   {
+    id: "1",
     image: "/news/thue-mua-nha-o-xa-hoi.png",
     title: "Thuê mua nhà ở xã hội theo luật nhà ở 2023",
     date: "18/05/2022",
@@ -22,6 +180,7 @@ export const featuredNews: Article[] = [
     ],
   },
   {
+    id: "2",
     image: "/news/quy-dinh-sinh-trac-hoc.png",
     title: "Quy định về sinh trắc học khi chuyển khoản",
     date: "18/05/2022",
@@ -41,6 +200,7 @@ export const featuredNews: Article[] = [
     ],
   },
   {
+    id: "3",
     image: "/news/hoat-dong-tu-van-dau-tu.png",
     title: "Hoạt Động Tư Vấn Đầu Tư",
     date: "18/05/2022",
@@ -60,6 +220,7 @@ export const featuredNews: Article[] = [
     ],
   },
   {
+    id: "4",
     image: "/news/xin-giay-xac-nhan-attp.png",
     title: "Xin Giấy Xác Nhận ATTP Đối Với Thực Phẩm Chức Năng",
     date: "18/05/2022",
@@ -79,6 +240,7 @@ export const featuredNews: Article[] = [
     ],
   },
   {
+    id: "5",
     image: "/news/nha-o-ket-hop-kinh-doanh.png",
     title: "Nhà ở kết hợp kinh doanh phải tuân thủ quy định PCCC",
     date: "18/05/2022",
@@ -103,6 +265,7 @@ export const featuredNews: Article[] = [
 // Example Article Data
 export const latestNews: Article[] = [
   {
+    id: "1",
     image: "/news/article1.png",
     title: "Cấp Giấy Phép Đầu Tư Ra Nước Ngoài",
     date: "18/05/2022",
@@ -116,6 +279,7 @@ export const latestNews: Article[] = [
     ],
   },
   {
+    id: "2",
     image: "/news/article2.png",
     title: "Từ 1/9 Chế Độ Thai Sản Cho Lao Động Nam Khi Vợ Sinh Con Có Gì Mới?",
     date: "18/05/2022",
@@ -129,6 +293,7 @@ export const latestNews: Article[] = [
     ],
   },
   {
+    id: "3",
     image: "/news/article3.png",
     title:
       "Thủ Tục Đăng Ký Thế Chấp Quyền Sử Dụng Đất, Tài Sản Gắn Liền Với Đất",
@@ -143,6 +308,7 @@ export const latestNews: Article[] = [
     ],
   },
   {
+    id: "4",
     image: "/news/article4.png",
     title: "Dừng Xét Nghiệm COVID-19 Khi Nhập Cảnh Vào Việt Nam Từ 15/5",
     date: "18/05/2022",
@@ -156,6 +322,7 @@ export const latestNews: Article[] = [
     ],
   },
   {
+    id: "5",
     image: "/news/article5.png",
     title:
       "Thay Đổi Thời Gian Học Thực Hành Lái Xe Ô Tô Trên Đường Từ Ngày 15/6/2022",
@@ -170,6 +337,7 @@ export const latestNews: Article[] = [
     ],
   },
   {
+    id: "6",
     image: "/news/article6.png",
     title: "Những Chính Sách Hỗ Trợ NLĐ Còn Hiệu Lực",
     date: "18/05/2022",
@@ -183,6 +351,7 @@ export const latestNews: Article[] = [
     ],
   },
   {
+    id: "7",
     image: "/news/article7.png",
     title: "Quy Định Mới Hỗ Trợ Doanh Nghiệp Nhỏ Và Vừa",
     date: "18/05/2022",
@@ -196,6 +365,7 @@ export const latestNews: Article[] = [
     ],
   },
   {
+    id: "8",
     image: "/news/article8.png",
     title:
       "Doanh Nghiệp, Hợp Tác Xã, Hộ Kinh Doanh Được Hỗ Trợ Lãi Suất 2%/Năm",
@@ -211,6 +381,7 @@ export const latestNews: Article[] = [
   },
   // Additional custom articles
   {
+    id: "9",
     image: "/news/article9.png",
     title: "Công Nghệ Blockchain Đang Thay Đổi Ngành Tài Chính",
     date: "19/05/2022",
@@ -224,6 +395,7 @@ export const latestNews: Article[] = [
     ],
   },
   {
+    id: "10",
     image: "/news/article10.png",
     title: "Sự Phát Triển Của AI Trong Đời Sống Hàng Ngày",
     date: "20/05/2022",
@@ -237,6 +409,7 @@ export const latestNews: Article[] = [
     ],
   },
   {
+    id: "11",
     image: "/news/article11.png",
     title: "Bảo Vệ Môi Trường Với Các Sáng Kiến Xanh",
     date: "21/05/2022",
@@ -250,6 +423,7 @@ export const latestNews: Article[] = [
     ],
   },
   {
+    id: "12",
     image: "/news/article12.png",
     title: "Xu Hướng Ứng Dụng IoT Trong Nông Nghiệp",
     date: "22/05/2022",
@@ -263,6 +437,7 @@ export const latestNews: Article[] = [
     ],
   },
   {
+    id: "13",
     image: "/news/article13.png",
     title: "Hướng Dẫn Du Lịch An Toàn Hậu COVID-19",
     date: "23/05/2022",
@@ -276,6 +451,7 @@ export const latestNews: Article[] = [
     ],
   },
   {
+    id: "14",
     image: "/news/article14.png",
     title: "Phát Triển Kinh Tế Số Tại Việt Nam",
     date: "24/05/2022",
@@ -289,6 +465,7 @@ export const latestNews: Article[] = [
     ],
   },
   {
+    id: "15",
     image: "/news/article15.png",
     title: "Giáo Dục Trực Tuyến Trong Thời Đại Số",
     date: "25/05/2022",
@@ -302,6 +479,7 @@ export const latestNews: Article[] = [
     ],
   },
   {
+    id: "16",
     image: "/news/article16.png",
     title: "Cải Tiến Dịch Vụ Y Tế Với Công Nghệ Mới",
     date: "26/05/2022",
@@ -315,6 +493,7 @@ export const latestNews: Article[] = [
     ],
   },
   {
+    id: "17",
     image: "/news/article17.png",
     title: "Phát Triển Hạ Tầng Giao Thông Đô Thị Bền Vững",
     date: "27/05/2022",
@@ -328,6 +507,7 @@ export const latestNews: Article[] = [
     ],
   },
   {
+    id: "18",
     image: "/news/article18.png",
     title: "Tăng Cường Kết Nối Kinh Tế Vùng",
     date: "28/05/2022",
