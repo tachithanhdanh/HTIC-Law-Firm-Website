@@ -1,11 +1,11 @@
 import { NewsItem } from "@/components/common/NewsGrid";
 import { Article } from "@/components/common/PaginatedArticleList";
-import { getStaticImagePath } from "@/utils";
+import {} from "@/utils";
 
 export const legalConsultNews: Article[] = [
   {
     id: "1",
-    image: getStaticImagePath("/consult/thu-tuc-chuyen-muc.png"),
+    image: "/consult/thu-tuc-chuyen-muc.png",
     title: "Thủ Tục Chuyển Mục Đích Sử Dụng Đất Của Hộ Gia Đình, Cá Nhân",
     date: "18/05/2022",
     description: [
@@ -31,7 +31,7 @@ export const legalConsultNews: Article[] = [
   },
   {
     id: "2",
-    image: getStaticImagePath("/consult/thu-tuc-sang-ten.png"),
+    image: "/consult/thu-tuc-sang-ten.png",
     title: "Thủ Tục Sang Tên Sổ Đỏ",
     date: "18/05/2022",
     description: [
@@ -57,7 +57,7 @@ export const legalConsultNews: Article[] = [
   },
   {
     id: "3",
-    image: getStaticImagePath("/consult/xin-cap-giay-phep.png"),
+    image: "/consult/xin-cap-giay-phep.png",
     title: "Thủ Tục Xin Cấp Giấy Phép Du Học",
     date: "18/05/2022",
     description: [
@@ -83,7 +83,7 @@ export const legalConsultNews: Article[] = [
   },
   {
     id: "4",
-    image: getStaticImagePath("/consult/thanh-lap-cong-ty.png"),
+    image: "/consult/thanh-lap-cong-ty.png",
     title: "Thành Lập Công Ty Có Vốn Đầu Tư Nước Ngoài Tại Việt Nam",
     date: "18/05/2022",
     description: [
@@ -109,7 +109,7 @@ export const legalConsultNews: Article[] = [
   },
   {
     id: "5",
-    image: getStaticImagePath("/consult/khoan-chi-phi.png"),
+    image: "/consult/khoan-chi-phi.png",
     title:
       "Các Khoản Chi Phí Được Trừ Và Không Được Trừ Khi Tính Thuế TNDN 2021",
     date: "18/05/2022",
