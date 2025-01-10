@@ -17,18 +17,33 @@ type PaginatedArticleListProps = {
   projects: Article[];
   itemsPerPage?: number; // Optional for flexibility
   headerTitle: string;
+  columns?: 1 | 2; // New prop to define number of columns
+  hideHeader?: boolean; // New prop to hide header and search bar
 };
 
 const PaginatedArticleList: React.FC<PaginatedArticleListProps> = ({
   projects,
   itemsPerPage = 5,
   headerTitle,
+  columns = 1, // Default is 1 column
+  hideHeader = false, // Default to false
 }) => {
   const [currentPage, setCurrentPage] = useState<number>(1);
   const totalPages = Math.ceil(projects.length / itemsPerPage);
 
   const handlePageChange = (page: number): void => {
     setCurrentPage(page);
+  };
+
+  const truncateDescription = (
+    description: DescriptionPart[][],
+    maxLength: number
+  ): string => {
+    const text = description
+      .flat()
+      .map((part) => part.text)
+      .join(" ");
+    return text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
   };
 
   const paginatedProjects = projects.slice(
@@ -39,72 +54,101 @@ const PaginatedArticleList: React.FC<PaginatedArticleListProps> = ({
   return (
     <section className="max-w-7xl mx-auto px-4">
       {/* Header */}
-      <div className="flex justify-between items-center mb-8">
-        <div className="flex items-center space-x-2">
-          <span className="h-8 w-1 bg-blue-500"></span>
-          <h2 className="text-2xl font-semibold text-gray-800">
-            {headerTitle}
-          </h2>
-        </div>
-        <div className="relative w-5/12">
-          <input
-            type="text"
-            placeholder="Tìm Kiếm"
-            className="w-full border border-gray-300 rounded-lg py-2 px-4 pr-10 focus:ring-blue-500 focus:border-blue-500"
-          />
-          <button
-            title="Search"
-            className="absolute right-3 top-2 text-gray-500"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={2}
-              stroke="currentColor"
-              className="w-5 h-5"
+      {!hideHeader && (
+        <div className="flex justify-between items-center mb-8">
+          <div className="flex items-center space-x-2">
+            <span className="h-8 w-1 bg-blue-500"></span>
+            <h2 className="text-2xl font-semibold text-gray-800">
+              {headerTitle}
+            </h2>
+          </div>
+          <div className="relative w-5/12">
+            <input
+              type="text"
+              placeholder="Tìm Kiếm"
+              className="w-full border border-gray-300 rounded-lg py-2 px-4 pr-10 focus:ring-blue-500 focus:border-blue-500"
+            />
+            <button
+              title="Search"
+              className="absolute right-3 top-2 text-gray-500"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-              />
-            </svg>
-          </button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                stroke="currentColor"
+                className="w-5 h-5"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
-      </div>
+      )}
 
       {/* Project List */}
-      <div className="space-y-6">
+      <div
+        className={`grid gap-6 ${
+          columns === 2 ? "grid-cols-2" : "grid-cols-1"
+        }`}
+      >
         {paginatedProjects.map((project, index) => (
           <div
             key={index}
-            className="bg-white rounded-lg border-slate-300 border-2 overflow-hidden flex py-4 ps-4"
+            className="bg-white rounded-lg border-slate-300 border-2 overflow-hidden grid grid-cols-12 items-center"
           >
-            <Image
-              src={project.image}
-              alt={project.title}
-              width={180}
-              height={180}
-              className="object-cover"
-            />
-            <div className="p-6">
+            {/* Image Section */}
+            <div
+              className={`flex items-center justify-center ms-3 ${
+                columns === 1 ? "col-span-2" : "col-span-3"
+              }`}
+            >
+              <Image
+                src={project.image}
+                alt={project.title}
+                width={columns === 1 ? 180 : 115}
+                height={columns === 1 ? 180 : 115}
+                className="object-cover"
+              />
+            </div>
+
+            {/* Content Section */}
+            <div
+              className={`p-6 ${columns === 1 ? "col-span-10" : "col-span-9"}`}
+            >
               <h3 className="text-sm font-bold text-gray-800 mb-2">
                 {project.title}
               </h3>
               <p className="text-xs text-gray-500 mb-2">{project.date}</p>
-              {project.description.map((paragraph, paragraphIndex) => (
-                <p key={paragraphIndex} className="text-sm text-gray-700 my-0">
-                  {paragraph.map((part, partIndex) => (
-                    <span
-                      key={partIndex}
-                      className={part.isBold ? "font-bold" : ""}
-                    >
-                      {part.text}
-                    </span>
-                  ))}
-                </p>
-              ))}
+              <div className="text-sm text-gray-700">
+                {columns === 2
+                  ? // If in 2-column mode, truncate to 200 characters
+                    truncateDescription(project.description, 200)
+                      .split("\n")
+                      .map((paragraph, paragraphIndex) => (
+                        <p key={paragraphIndex}>{paragraph}</p>
+                      ))
+                  : // Otherwise, render each paragraph separately
+                    project.description.map((paragraph, paragraphIndex) => (
+                      <p key={paragraphIndex}>
+                        {paragraph.map((part, partIndex) => (
+                          <span
+                            key={partIndex}
+                            style={{
+                              fontWeight: part.isBold ? "bold" : "normal",
+                            }}
+                          >
+                            {part.text}
+                          </span>
+                        ))}
+                      </p>
+                    ))}
+              </div>
             </div>
           </div>
         ))}
