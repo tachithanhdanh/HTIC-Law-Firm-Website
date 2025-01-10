@@ -5,12 +5,11 @@ import {
   latestNews,
   relatedNews,
 } from "@/data/news";
-import { useState } from "react";
 import NewsDetailContent from "./NewsDetailContent";
 import NewsSidebarContent from "./NewsSidebarContent";
 
 const NewsDetailBody = () => {
-  const [articles, setArticles] = useState([...latestNews]);
+  const articles = latestNews;
 
   return (
     <div className="py-12 bg-gray-50 px-16 lg:px-24">
