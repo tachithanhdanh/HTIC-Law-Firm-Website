@@ -3,6 +3,47 @@ import { getStaticImagePath } from "@/utils";
 
 type Project = Article;
 
+export const featuredProjects: Project[] = [
+  {
+    image: "/projects/hoat-dong-tu-van-dau-tu.png",
+    title: "Hoạt Động Tư Vấn Đầu Tư",
+    date: "18/05/2022",
+    description: [
+      [
+        {
+          text: "Lĩnh vực Tư vấn đầu tư luôn là thế mạnh của HTIC, cho đến nay chúng tôi đã tư vấn cho hàng chục dự án đầu tư bao gồm khách hàng ngoài nước (tư vấn đầu tư nước ngoài) và các nhà đầu tư trong nước.",
+          isBold: false,
+        },
+      ],
+      [
+        {
+          text: "Các dự án tiêu biểu như: Thành lập dự án đầu tư tại Việt Nam; Đầu tư vào các Khu công nghiệp, Mua bán - sáp nhập doanh nghiệp (M&A)...",
+          isBold: false,
+        },
+      ],
+    ],
+  },
+  {
+    image: "/projects/xin-giay-xac-nhan-attp.png",
+    title: "Xin Giấy Xác Nhận ATTP Đối Với Thực Phẩm Chức Năng",
+    date: "18/05/2022",
+    description: [
+      [
+        {
+          text: "Khách hàng là Công ty TNHH ABC Việt Nam hoạt động kinh doanh chủ yếu liên quan đến lĩnh vực truyền thông, tổ chức sự kiện.",
+          isBold: false,
+        },
+      ],
+      [
+        {
+          text: "Ngoài ra, Công ty ABC có mối quan hệ mật thiết mạnh trên mảng truyền thông, marketing của mình để mở rộng kinh doanh thị trường bán lẻ các sản phẩm thực phẩm bảo vệ sức khỏe (“thực phẩm chức năng”) do Công ty nhập khẩu trực tiếp từ Hàn Quốc.",
+          isBold: false,
+        },
+      ],
+    ],
+  },
+];
+
 export const projects: Project[] = [
   {
     image: getStaticImagePath("/projects/hoat-dong-giai-quyet.png"),

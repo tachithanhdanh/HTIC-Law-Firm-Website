@@ -1,8 +1,11 @@
+import NewsBody from "@/components/news/NewsBody";
+import NewsHeader from "@/components/news/NewsHeader";
+
 const News = () => {
   return (
     <div>
-      <h1>Tin Tức</h1>
-      <p>Các thông tin mới nhất được cập nhật tại đây.</p>
+      <NewsHeader />
+      <NewsBody />
     </div>
   );
 };
