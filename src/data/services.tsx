@@ -21,7 +21,7 @@ export const SERVICES = [
       "Cung cấp dịch vụ tư vấn pháp lý liên tục, hỗ trợ giải quyết các vấn đề pháp lý hàng ngày cho cá nhân và doanh nghiệp.",
   },
   {
-    id: "ho-tro-phap-ly-nguoi-nhat",
+    id: "ho-tro-phap-ly-cho-nguoi-nhat",
     image: "/services/ho-tro-phap-ly.png",
     title: "Hỗ trợ pháp lý cho người Nhật tại Việt Nam",
     description:

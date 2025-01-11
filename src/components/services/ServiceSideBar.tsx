@@ -1,28 +1,30 @@
-// components/ServiceSidebar.tsx
+// components/ServiceNavbar.tsx
 import { SERVICES } from "@/data/services";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-const ServiceSidebar = () => {
+const ServiceNavbar = () => {
   const router = useRouter();
-  const currentServiceId = router.query.id as string;
+  const currentServiceId = router.pathname.split("/").pop();
 
   return (
-    <div className="w-64 border-r border-gray-200 h-full">
+    <div className="border-b border-gray-200">
       <nav className="p-4">
-        <h3 className="text-lg font-semibold mb-4">Dịch vụ của chúng tôi</h3>
-        <ul className="space-y-2">
-          {SERVICES.map((service) => (
+        <h3 className="text-lg font-semibold mb-4 ml-6 text-gray-800">
+          Danh sách dịch vụ
+        </h3>
+        <ul className="flex-col bg-white">
+          {SERVICES.map((service, index) => (
             <li key={service.id}>
               <Link
                 href={`/services/${service.id}`}
-                className={`block p-2 rounded-lg transition-colors ${
+                className={`block px-4 py-2 rounded-lg transition-colors ${
                   currentServiceId === service.id
-                    ? "bg-blue-50 text-blue-600"
-                    : "hover:bg-gray-50"
+                    ? "bg-blue-100 text-blue-600"
+                    : "hover:bg-gray-100 text-gray-600"
                 }`}
               >
-                {service.title}
+                {index + 1}. {service.title}
               </Link>
             </li>
           ))}
@@ -32,4 +34,4 @@ const ServiceSidebar = () => {
   );
 };
 
-export default ServiceSidebar;
+export default ServiceNavbar;
