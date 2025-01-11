@@ -17,7 +17,6 @@ const LogoCarousel = () => {
         prevIndex === slides.length - 1 ? 0 : prevIndex + 1
       );
     }, 5000); // Transition every 5 seconds
-
     return () => clearInterval(interval); // Cleanup interval on unmount
   }, [slides.length]);
 
